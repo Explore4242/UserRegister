@@ -1,0 +1,24 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    @*<div>course/MyView</div>*@
+    @ViewBag.Greeting student, How are you?
+    <p>
+        Hope, you will enjoy the course
+    </p>
+    <a asp-action="apply">Apply course</a>
+</body>
+</html>

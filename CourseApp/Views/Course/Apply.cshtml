@@ -1,0 +1,45 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Apply</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" asp-action="apply" class="container mt-5">
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Name">Name:</label>
+            <input class="form-control" style="border:1px solid green; width:500px" asp-for="Name" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Email">Email:</label>
+            <input class="form-control" style="border:1px solid green; width:500px" asp-for="Email" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="phone">Phone:</label>
+            <input class="form-control" style="border:1px solid green; width:500px" asp-for="phone" />
+        </div>
+
+        <div class="form-group" >
+            <label class="form-label" asp-for="WillAtend">WillAtend:</label>
+            <select style="width: 300px; border: 1px solid green; width: 500px " asp-for="WillAtend" class="form-select" aria-label="Default select example">
+                <option selected>Select an Option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            </div>
+            <div class=" d-flex justify-content-center " style="max-width:500px">
+                <button type="submit" class="btn btn-outline-success mt-3" style="width: 300px;">Giriş</button>
+            </div>
+</form>
+</body>
+</html>
