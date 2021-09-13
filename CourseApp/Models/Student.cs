@@ -8,14 +8,13 @@ namespace CourseApp.Models
 {
     public class Student
     {
-        [Required(ErrorMessage="İsminizi giriniz.")]
+        //[Required()]
         public string Name { get; set; }
-        [EmailAddress(ErrorMessage = "Geçerli bir email giriniz.")]
-        [Required(ErrorMessage = "Email giriniz.")]
+        //[Required()]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Telefononuzu giriniz.")]
+        //[Required()]
         public string phone { get; set; }
-        [Required(ErrorMessage = "Kursa katılıp katılmayacağınızı bilmemiz gerekir.")]
+        //[Required()]
         public bool? WillAtend { get; set; }
     }
 }
