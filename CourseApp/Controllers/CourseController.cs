@@ -24,7 +24,8 @@ namespace CourseApp.Controllers
         [HttpPost]
         public ViewResult Apply(Student student)
         {
-            return View();
+            Repository.AddStudent(student);
+            return View("Thanks",student);
         }
     }
 }

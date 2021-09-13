@@ -11,7 +11,7 @@ namespace CourseApp.Controllers
     {
         public IActionResult Index()
         {
-            var course = new Course();
+            var course = new Models.Course();
             course.Id = 1;
             course.Name = "Asp .Net Core 2 Kursu";
             return View(course);

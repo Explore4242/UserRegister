@@ -1,0 +1,26 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>Thanks</title>
+</head>
+<body>
+    <h2 style="color:rebeccapurple">@Model.Name</h2>
+    <hr />
+    @if (Model.WillAtend == true)
+    {
+        @:Kursa katılmış olduğundan dolayı çok mutlu olduk.
+    }
+    else
+    {
+        @:Kursa Katılmadığından dolayı Üzüldük.
+    }
+</body>
+</html>
