@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Student>
 @{
     Layout = null;
 }
@@ -11,7 +11,25 @@
     <title>List</title>
 </head>
 <body>
-    <div>merhaba Course List im ben</div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.phone<td>
+            </tr>
+            }
+        </tbody>
+    </table>
 
 </body>
 </html>

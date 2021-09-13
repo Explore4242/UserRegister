@@ -13,12 +13,12 @@
 
 </head>
 <body>
-
-    @*<div>course/MyView</div>*@
-    @ViewBag.Greeting student, How are you?
-    <p>
-        Hope, you will enjoy the course
-    </p>
-    <a asp-action="apply">Apply course</a>
+    <div class="text-center">
+        <h3> @ViewBag.Greeting student, How are you?</h3>
+        <h4>
+            Hope, you will enjoy the course
+        </h4>
+        <a asp-action="apply" class="btn btn-primary">Apply course</a>
+    </div>
 </body>
 </html>

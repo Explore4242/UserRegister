@@ -12,15 +12,19 @@
     <title>Thanks</title>
 </head>
 <body>
-    <h2 style="color:rebeccapurple">@Model.Name</h2>
+    <h2 class="m-lg-5"> @Model.Name</h2>
     <hr />
-    @if (Model.WillAtend == true)
-    {
-        @:Kursa katılmış olduğundan dolayı çok mutlu olduk.
-    }
-    else
-    {
-        @:Kursa Katılmadığından dolayı Üzüldük.
-    }
+    <div class="m-5">
+        @if (Model.WillAtend == true)
+        {
+            @:Kursa katılmış olduğundan dolayı çok mutlu olduk.
+        }
+        else
+        {
+            @:Kursa Katılmadığından dolayı Üzüldük.
+        }
+    </div>
+    Kursa katılanları <a asp-action="List">listele.</a>
+  
 </body>
 </html>

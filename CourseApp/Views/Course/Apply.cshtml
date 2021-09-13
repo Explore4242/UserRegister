@@ -10,36 +10,43 @@
     <meta name="viewport" content="width=device-width" />
     <title>Apply</title>
     <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <form method="post" asp-action="apply" class="container mt-5">
+    <div class="login-box">
+        <form method="post" asp-action="apply">
 
-        <div class="form-group">
-            <label class="form-label" asp-for="Name">Name:</label>
-            <input class="form-control" style="border:1px solid green; width:500px" asp-for="Name" />
-        </div>
+            <div asp-validation-summary="All"></div>
 
-        <div class="form-group">
-            <label class="form-label" asp-for="Email">Email:</label>
-            <input class="form-control" style="border:1px solid green; width:500px" asp-for="Email" />
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" asp-for="phone">Phone:</label>
-            <input class="form-control" style="border:1px solid green; width:500px" asp-for="phone" />
-        </div>
-
-        <div class="form-group" >
-            <label class="form-label" asp-for="WillAtend">WillAtend:</label>
-            <select style="width: 300px; border: 1px solid green; width: 500px " asp-for="WillAtend" class="form-select" aria-label="Default select example">
-                <option selected>Select an Option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select>
+            <div class="user-box">
+                <input class="form-control" asp-for="Name" placeholder="Name"/>
             </div>
-            <div class=" d-flex justify-content-center " style="max-width:500px">
-                <button type="submit" class="btn btn-outline-success mt-3" style="width: 300px;">Giriş</button>
+
+            <div class="user-box">
+                <input class="form-control" asp-for="Email" placeholder="Email" />
             </div>
-</form>
+
+            <div class="user-box">
+                <input class="form-control" asp-for="phone" placeholder="phone"/>
+            </div>
+
+            <div class="user-box">
+                <select asp-for="WillAtend" style="background-color: rgba(0,0,0,.5); border-color: rgba(0,0,0,.5);color:#beb6b6 " class="form-select" aria-label="Default select example">
+                    <option selected>Kursa Katılıyormusunuz</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        
+            <button style="border: none; background-color: linear-gradient(90deg, transparent, #03e9f4);" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Kayıt
+            </button>
+
+        </form>
+    </div>
 </body>
 </html>

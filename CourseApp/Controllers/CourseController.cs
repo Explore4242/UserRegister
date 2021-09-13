@@ -15,6 +15,11 @@ namespace CourseApp.Controllers
             ViewBag.Greeting = hour > 12 ? "God Afternoon" : "Goodmorning";
             return View("MyView");
         }
+        public ViewResult List()
+        {
+            var liste = Repository.Students.Where(i => i.WillAtend == true);
+            return View(liste);
+        }
 
         [HttpGet]
         public ViewResult Apply()
@@ -24,8 +29,16 @@ namespace CourseApp.Controllers
         [HttpPost]
         public ViewResult Apply(Student student)
         {
-            Repository.AddStudent(student);
-            return View("Thanks",student);
+            if (ModelState.IsValid)
+            {
+                Repository.AddStudent(student);
+                return View("Thanks", student);
+            }
+            else
+            {
+                return View();
+            }
+
         }
     }
 }

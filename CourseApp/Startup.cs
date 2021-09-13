@@ -31,11 +31,12 @@ namespace CourseApp
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvc(routes=>
             {
                 routes.MapRoute(
                     name: "default",    
-                    template: "{controller=Course}/{action=apply}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
