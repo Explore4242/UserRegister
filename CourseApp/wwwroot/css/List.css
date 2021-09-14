@@ -1,0 +1,11 @@
+﻿
+.bi-power {
+    width: 25px;
+    height: 25px;
+    border-radius:70%;
+}
+    .bi-power:hover {
+        box-shadow: -1px -1px 10px 7px rgb(0 0 0 / 10%);
+        background-color: rgb(255 55 0 / 0.67);
+        cursor: pointer;
+    }
