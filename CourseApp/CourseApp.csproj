@@ -13,4 +13,15 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\assetst\angular.png" />
+    <None Include="wwwroot\assetst\asp.png" />
+    <None Include="wwwroot\assetst\frotend.jfif" />
+    <None Include="wwwroot\assetst\ingilizce.jfif" />
+    <None Include="wwwroot\assetst\java.jfif" />
+    <None Include="wwwroot\assetst\php.jfif" />
+    <None Include="wwwroot\assetst\siber.jfif" />
+    <None Include="wwwroot\assetst\ünity.jfif" />
+  </ItemGroup>
+
 </Project>
